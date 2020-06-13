@@ -112,7 +112,6 @@ fn make_roman_numeral(my_int: i32) -> String {
             if next_valid_subtractor.is_some() {
                 let next_sub = next_valid_subtractor.unwrap();
                 if next_sub.value <= remainder {
-                    println!("next sub: {:?} {:?}", next_sub.txt, next_sub.value);
                     roman_numeral.push_str(&next_sub.txt);
                     remainder -= next_sub.value;
                     break;
